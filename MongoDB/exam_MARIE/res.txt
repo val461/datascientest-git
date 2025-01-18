@@ -1,0 +1,294 @@
+Question (a).
+
+Question (b).
+
+['admin', 'config', 'local', 'sample']
+
+Question (c).
+
+['cie', 'books', 'weather', 'rand', 'grades', 'zips']
+
+Question (d).
+
+{'_id': 1,
+ 'authors': ['W. Frank Ableson', 'Charlie Collins', 'Robi Sen'],
+ 'categories': ['Open Source', 'Mobile'],
+ 'isbn': '1933988673',
+ 'longDescription': 'Android is an open source mobile phone platform based on '
+                    'the Linux operating system and developed by the Open '
+                    'Handset Alliance, a consortium of over 30 hardware, '
+                    'software and telecom companies that focus on open '
+                    'standards for mobile devices. Led by search giant, '
+                    'Google, Android is designed to deliver a better and more '
+                    'open and cost effective mobile experience.    Unlocking '
+                    "Android: A Developer's Guide provides concise, hands-on "
+                    'instruction for the Android operating system and '
+                    'development tools. This book teaches important '
+                    'architectural concepts in a straightforward writing style '
+                    'and builds on this with practical and useful examples '
+                    'throughout. Based on his mobile development experience '
+                    'and his deep knowledge of the arcane Android technical '
+                    'documentation, the author conveys the know-how you need '
+                    'to develop practical applications that build upon or '
+                    'replace any of Androids features, however small.    '
+                    "Unlocking Android: A Developer's Guide prepares the "
+                    'reader to embrace the platform in easy-to-understand '
+                    'language and builds on this foundation with re-usable '
+                    'Java code examples. It is ideal for corporate and '
+                    'hobbyists alike who have an interest, or a mandate, to '
+                    "deliver software functionality for cell phones.    WHAT'S "
+                    "INSIDE:        * Android's place in the market      * "
+                    'Using the Eclipse environment for Android '
+                    'development      * The Intents - how and why they are '
+                    'used      * Application classes:            o '
+                    'Activity            o Service            o '
+                    'IntentReceiver       * User interface design      * Using '
+                    'the ContentProvider to manage data      * Persisting data '
+                    'with the SQLite database      * Networking examples      '
+                    '* Telephony applications      * Notification methods      '
+                    '* OpenGL, animation & multimedia      * Sample '
+                    'Applications  ',
+ 'pageCount': 416,
+ 'publishedDate': datetime.datetime(2009, 4, 1, 7, 0),
+ 'shortDescription': "Unlocking Android: A Developer's Guide provides concise, "
+                     'hands-on instruction for the Android operating system '
+                     'and development tools. This book teaches important '
+                     'architectural concepts in a straightforward writing '
+                     'style and builds on this with practical and useful '
+                     'examples throughout.',
+ 'status': 'PUBLISH',
+ 'thumbnailUrl': 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg',
+ 'title': 'Unlocking Android'}
+
+Question (e).
+
+431
+
+Question (a).
+
+157
+155
+
+Question (b).
+
+4
+
+Question (c).
+
+[{'_id': None,
+  'c0': ['Java',
+         'PowerBuilder',
+         'Internet',
+         'Algorithmic Art',
+         'Web Development',
+         'Next Generation Databases',
+         'Software Engineering',
+         'PHP',
+         'Microsoft .NET',
+         'In Action',
+         'Computer Graphics',
+         'internet',
+         'Object-Technology Programming',
+         'Open Source',
+         'Mobile Technology',
+         'Client-Server',
+         'Perl',
+         'Object-Oriented Programming',
+         'SOA',
+         'Microsoft/.NET',
+         'java',
+         'Business',
+         'Microsoft',
+         'Miscellaneous',
+         'Theory',
+         'Networking',
+         'XML',
+         'Python',
+         'Programming'],
+  'c1': ['P',
+         'Internet',
+         'Software Engineering',
+         'S',
+         '.NET',
+         'Mobile',
+         'Perl',
+         'Computer Graphics',
+         'Open Source',
+         'Business',
+         'Client-Server',
+         'Software Development',
+         'Theory',
+         '',
+         'Python',
+         'Networking',
+         'Java']}]
+
+Question (d).
+
+126
+
+Question (e).
+
+[{'_id': 'Java', 'max': 1088, 'min': 0, 'moy': 412.21875},
+ {'_id': 'PowerBuilder', 'max': 550, 'min': 362, 'moy': 433.7142857142857},
+ {'_id': 'Internet', 'max': 912, 'min': 0, 'moy': 441.2439024390244},
+ {'_id': 'P', 'max': 512, 'min': 512, 'moy': 512.0},
+ {'_id': 'Web Development', 'max': 688, 'min': 300, 'moy': 441.47058823529414},
+ {'_id': 'Next Generation Databases', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'Algorithmic Art', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'Software Engineering', 'max': 544, 'min': 0, 'moy': 287.75},
+ {'_id': 'Mobile', 'max': 416, 'min': 416, 'moy': 416.0},
+ {'_id': 'S', 'max': 350, 'min': 350, 'moy': 350.0},
+ {'_id': 'PHP', 'max': 552, 'min': 552, 'moy': 552.0},
+ {'_id': 'Microsoft .NET', 'max': 848, 'min': 0, 'moy': 437.02941176470586},
+ {'_id': 'Miscella', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'In Action', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'Computer Graphics', 'max': 840, 'min': 328, 'moy': 520.3333333333334},
+ {'_id': 'internet', 'max': 400, 'min': 400, 'moy': 400.0},
+ {'_id': 'Software Development', 'max': 600, 'min': 600, 'moy': 600.0},
+ {'_id': 'Open Source', 'max': 532, 'min': 416, 'moy': 474.0},
+ {'_id': 'Mobile Technology', 'max': 504, 'min': 0, 'moy': 296.5},
+ {'_id': 'Client-Server', 'max': 1101, 'min': 220, 'moy': 516.0},
+ {'_id': 'Object-Technology Programming', 'max': 200, 'min': 200, 'moy': 200.0},
+ {'_id': 'Computer Graph', 'max': 400, 'min': 400, 'moy': 400.0},
+ {'_id': '', 'max': 368, 'min': 200, 'moy': 284.0},
+ {'_id': '.NET', 'max': 925, 'min': 925, 'moy': 925.0},
+ {'_id': 'Perl', 'max': 504, 'min': 304, 'moy': 385.3333333333333},
+ {'_id': 'Object-Oriented Programming', 'max': 512, 'min': 350, 'moy': 408.5},
+ {'_id': 'SOA', 'max': 250, 'min': 250, 'moy': 250.0},
+ {'_id': 'Microsoft/.NET', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'java', 'max': 0, 'min': 0, 'moy': 0.0},
+ {'_id': 'Business', 'max': 696, 'min': 180, 'moy': 404.1666666666667},
+ {'_id': 'Client Server', 'max': 368, 'min': 368, 'moy': 368.0},
+ {'_id': 'Microsoft', 'max': 925, 'min': 344, 'moy': 572.375},
+ {'_id': 'Miscellaneous', 'max': 1096, 'min': 316, 'moy': 706.0},
+ {'_id': 'Theory', 'max': 591, 'min': 280, 'moy': 420.42857142857144},
+ {'_id': 'Networking', 'max': 591, 'min': 0, 'moy': 366.42857142857144},
+ {'_id': 'Python', 'max': 688, 'min': 350, 'moy': 482.3333333333333},
+ {'_id': 'XML', 'max': 680, 'min': 304, 'moy': 482.0},
+ {'_id': 'Programming', 'max': 570, 'min': 0, 'moy': 362.1666666666667}]
+
+Question (f).
+
+[{'_id': 3, 'dayOfMonth': 3, 'month': 6, 'year': 2011},
+ {'_id': 2, 'dayOfMonth': 14, 'month': 1, 'year': 2011},
+ {'_id': 5, 'dayOfMonth': 15, 'month': 11, 'year': 2010},
+ {'_id': 8, 'dayOfMonth': 15, 'month': 10, 'year': 2010},
+ {'_id': 9, 'dayOfMonth': 4, 'month': 6, 'year': 2012},
+ {'_id': 10, 'dayOfMonth': 12, 'month': 12, 'year': 2011},
+ {'_id': 17, 'dayOfMonth': 12, 'month': 12, 'year': 2011},
+ {'_id': 16, 'dayOfMonth': 16, 'month': 4, 'year': 2010},
+ {'_id': 30, 'dayOfMonth': 1, 'month': 6, 'year': 2010},
+ {'_id': 36, 'dayOfMonth': 15, 'month': 5, 'year': 2011},
+ {'_id': 37, 'dayOfMonth': 13, 'month': 2, 'year': 2012},
+ {'_id': 41, 'dayOfMonth': 1, 'month': 11, 'year': 2013},
+ {'_id': 45, 'dayOfMonth': 1, 'month': 1, 'year': 2010},
+ {'_id': 54, 'dayOfMonth': 30, 'month': 9, 'year': 2011},
+ {'_id': 52, 'dayOfMonth': 4, 'month': 9, 'year': 2010},
+ {'_id': 65, 'dayOfMonth': 17, 'month': 10, 'year': 2012},
+ {'_id': 73, 'dayOfMonth': 13, 'month': 4, 'year': 2012},
+ {'_id': 74, 'dayOfMonth': 27, 'month': 7, 'year': 2012},
+ {'_id': 133, 'dayOfMonth': 6, 'month': 4, 'year': 2011},
+ {'_id': 137, 'dayOfMonth': 13, 'month': 2, 'year': 2012}]
+
+Question (g).
+
+Pour n=7.
+
+[{'_id': 549, 'author_1': 'Bruce Trask', 'author_2': 'Angel Roman'},
+ {'_id': 512, 'author_1': 'Holly Cummins', 'author_2': 'Timothy Ward'},
+ {'_id': 648, 'author_1': 'Gavin M. Roy'},
+ {'_id': 165,
+  'author_1': 'Matthias Kaeppler',
+  'author_2': 'Michael D. Galpin',
+  'author_3': 'Charlie Collins'},
+ {'_id': 296, 'author_1': 'Jon Skeet'},
+ {'_id': 562,
+  'author_1': 'Christian Bauer',
+  'author_2': 'Gavin King',
+  'author_3': '',
+  'author_4': 'Gary Gregory'},
+ {'_id': 532},
+ {'_id': 649,
+  'author_1': 'Raymond Roestenburg',
+  'author_2': 'Rob Bakker',
+  'author_3': 'Rob Williams',
+  'author_4': 'Steven Haines'},
+ {'_id': 335, 'author_1': 'Gabe Zichermann', 'author_2': 'Chris Cunningham'},
+ {'_id': 550, 'author_1': 'Nathan Marz', 'author_2': 'James Warren'},
+ {'_id': 189, 'author_1': 'Amanda Laucher'},
+ {'_id': 175,
+  'author_1': 'Dierk König',
+  'author_2': 'Guillaume Laforge',
+  'author_3': 'Paul King',
+  'author_4': 'Cédric Champeau',
+  'author_5': "Hamlet D'Arcy",
+  'author_6': 'Erik Pragt',
+  'author_7': ''},
+ {'_id': 599, 'author_1': 'Robert A. Rice Jr.'},
+ {'_id': 146, 'author_1': 'Vikas Hazrati', 'author_2': 'Balaji D Loganathan'},
+ {'_id': 637,
+  'author_1': 'Jonas Partner',
+  'author_2': 'Aleksa Vukotic',
+  'author_3': '',
+  'author_4': 'Nicki Watt'},
+ {'_id': 658,
+  'author_1': 'Ryan Bigg',
+  'author_2': 'Yehuda Katz',
+  'author_3': 'and Steve Klabnik',
+  'author_4': ''},
+ {'_id': 657, 'author_1': 'Glen Smith', 'author_2': 'Peter Ledbrook'},
+ {'_id': 642, 'author_1': 'Alex Young', 'author_2': 'Marc Harter'},
+ {'_id': 640, 'author_1': 'Paul Chiusano', 'author_2': 'Rúnar Bjarnason'},
+ {'_id': 607, 'author_1': 'Julio C. Ody'}]
+
+Ces documents n'avaient pas de publishedDate. Un tri décroissant (spécifier -1 au lieu de 1) montrerait des documents ayant une publishedDate, triés.
+
+
+Question (h).
+
+[{'_id': None, 'nb': 37},
+ {'_id': 'Vikram Goyal', 'nb': 12},
+ {'_id': 'Don Jones', 'nb': 6},
+ {'_id': 'Christian Bauer', 'nb': 4},
+ {'_id': 'Craig Walls', 'nb': 4},
+ {'_id': 'Jon Skeet', 'nb': 3},
+ {'_id': 'David A. Black', 'nb': 3},
+ {'_id': 'Dave Crane', 'nb': 3},
+ {'_id': 'Richard Siddaway', 'nb': 3},
+ {'_id': 'Jeffrey Palermo', 'nb': 3}]
+
+Question (i).
+
+[{'_id': 1, 'd': 206},
+ {'_id': 4, 'd': 47},
+ {'_id': 5, 'd': 16},
+ {'_id': 8, 'd': 3},
+ {'_id': 7, 'd': 2},
+ {'_id': 6, 'd': 6},
+ {'_id': 3, 'd': 9},
+ {'_id': 2, 'd': 105},
+ {'_id': 0, 'd': 37}]
+
+Question (j).
+
+[{'_id': 'Vikram Goyal', 'nb': 12},
+ {'_id': 'Richard Siddaway', 'nb': 6},
+ {'_id': 'Don Jones', 'nb': 6},
+ {'_id': 'Jon Skeet', 'nb': 5},
+ {'_id': 'Christian Bauer', 'nb': 5},
+ {'_id': 'Gavin King', 'nb': 5},
+ {'_id': 'Yehuda Katz', 'nb': 5},
+ {'_id': 'Kalen Delaney', 'nb': 4},
+ {'_id': 'Greg Low', 'nb': 4},
+ {'_id': 'Craig Walls', 'nb': 4},
+ {'_id': 'Erik Hatcher', 'nb': 4},
+ {'_id': 'Daniel Minoli', 'nb': 3},
+ {'_id': 'Shannon Appelcline', 'nb': 3},
+ {'_id': 'Paul S. Randal', 'nb': 3},
+ {'_id': 'Gary Gregory', 'nb': 3},
+ {'_id': 'Jeffery Hicks', 'nb': 3},
+ {'_id': 'Kimberly L. Tripp', 'nb': 3},
+ {'_id': 'Bear Bibeault', 'nb': 3},
+ {'_id': 'Ted Neward', 'nb': 3},
+ {'_id': 'Adam Machanic', 'nb': 3}]

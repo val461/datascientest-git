@@ -1,3 +1,5 @@
+import re
+
 print('Question (a).')
 
 from pymongo import MongoClient
@@ -14,25 +16,25 @@ client = MongoClient(
 def p(l):
     pprint(list(l))
 
-print('Question (b).')
+print('\nQuestion (b).\n')
 
 print(client.list_database_names())
 
-print('Question (c).')
+print('\nQuestion (c).\n')
 
 sample = client["sample"]
 print(sample.list_collection_names())
 
-print('Question (d).')
+print('\nQuestion (d).\n')
 
 col = sample.books
 pprint(col.find_one())
 
-print('Question (e).')
+print('\nQuestion (e).\n')
 
 print(col.count_documents({}))
 
-print('Question (a).')
+print('\nQuestion (a).\n')
 
 print(col.count_documents({'pageCount': {'$gt': 400}}))
 print(col.count_documents({'$and':[
@@ -40,16 +42,15 @@ print(col.count_documents({'$and':[
     {'status': 'PUBLISH'}
     ]}))
 
-print('Question (b).')
+print('\nQuestion (b).\n')
 
-import re
 regex = re.compile("Android")
 print(col.count_documents(({'$or':[
     {'shortDescription': regex},
     {'longDescription': regex}
     ]})))
 
-print('Question (c).')
+print('\nQuestion (c).\n')
 
 p(col.aggregate([
     {'$group':
@@ -59,13 +60,13 @@ p(col.aggregate([
     }}
 ]))
 
-print('Question (d).')
+print('\nQuestion (d).\n')
 
 print(col.count_documents(({'$or':
     [{'longDescription': re.compile(s)} for s in ['Python', 'Java', 'C\+\+', 'Scala']]
     })))
 
-print('Question (e).')
+print('\nQuestion (e).\n')
 
 p(col.aggregate([
     {'$unwind':'$categories'},
@@ -78,7 +79,7 @@ p(col.aggregate([
     }
 ]))
 
-print('Question (f).')
+print('\nQuestion (f).\n')
 
 p(col.aggregate([
     {'$project':{
@@ -92,10 +93,10 @@ p(col.aggregate([
     {'$limit':20}
 ]))
 
-print('Question (g).')
+print('\nQuestion (g).\n')
 
 n = 7
-print(f'Pour n={n}.')
+print(f'Pour n={n}.\n')
 
 d = {**{f'author_{k+1}':{'$arrayElemAt': ['$authors',k]} for k in range(n)},
      **{'publishedDate':'$publishedDate'}}
@@ -106,12 +107,9 @@ p(col.aggregate([
     {'$limit':20}
 ]))
 
-print("Ces documents n'avaient pas de publishedDate. Un tri décroissant (spécifier -1 au lieu de 1) montrerait des documents ayant une publishedDate, triés.")
+print("\nCes documents n'avaient pas de publishedDate. Un tri décroissant (spécifier -1 au lieu de 1) montrerait des documents ayant une publishedDate, triés.\n")
 
-print('Question (h).')
-
-n = 1
-d =
+print('\nQuestion (h).\n')
 
 p(col.aggregate([
     {'$project': {'author':{'$arrayElemAt': ['$authors',0]}}},
@@ -121,14 +119,14 @@ p(col.aggregate([
 ]))
 
 
-print('Question (i).')
+print('\nQuestion (i).\n')
 
 p(col.aggregate([
     {'$project': {'nb':{'$size': '$authors'}}},
     {'$group': {'_id':'$nb', 'd':{'$sum':1}}}
 ]))
 
-print('Question (j).')
+print('\nQuestion (j).\n')
 
 p(col.aggregate([
     {'$unwind': '$authors'},
