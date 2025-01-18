@@ -129,7 +129,6 @@ p(col.aggregate([
 ]))
 
 print('Question (j).')
-#todo
 
 p(col.aggregate([
     {'$unwind': '$authors'},
