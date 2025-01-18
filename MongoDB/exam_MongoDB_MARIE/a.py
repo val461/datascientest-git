@@ -53,23 +53,6 @@ print(col.count_documents(({'$or':[
 
 p(col.aggregate([
     {'$group':
-        {'_id': '$categories'
-    }}
-]))
-
-
-# separate results
-p(col.aggregate([
-    {'$group':
-        {'_id': '$categories',
-        'c0': {'$addToSet': {'$arrayElemAt': ['$categories',0]}},
-        'c1': {'$addToSet': {'$arrayElemAt': ['$categories',1]}}
-    }},
-    {'$project': {'_id': 0}}
-]))
-
-p(col.aggregate([
-    {'$group':
         {'_id': None,
         'c0': {'$addToSet': {'$arrayElemAt': ['$categories',0]}},
         'c1': {'$addToSet': {'$arrayElemAt': ['$categories',1]}}
@@ -77,25 +60,6 @@ p(col.aggregate([
 ]))
 
 
-# error
-p(col.aggregate([
-    {'$group':
-        {'_id': '$categories',}},
-    {'$project': {'set_0':
-        {'$addToSet':
-            {'$arrayElemAt': ['$_id',0]}
-    }}}
-]))
-
-# error
-p(col.aggregate([
-    {'$group':
-        {'_id': '$categories',}},
-    {'$addToSet': {'set_0':
-        {'$addToSet':
-            {'$arrayElemAt': ['$_id',0]}
-    }}}
-]))
 
 
 
