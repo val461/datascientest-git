@@ -83,3 +83,6 @@ if __name__ == "__main__":
         output_dir=args.output,
         port=args.port
     )
+
+# export MLFLOW_TRACKING_URI=http://127.0.0.1:8080
+# mlflow run src/ --experiment-id 534228407498600468 --run-name first_run_reproduced --env-manager=local
