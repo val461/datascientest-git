@@ -1,2 +1,5 @@
 __pycache__
 *.tar
+env_mlflow
+mlruns
+MLflow_Course/apple_project/fake_data.csv
