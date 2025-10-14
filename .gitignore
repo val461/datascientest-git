@@ -4,3 +4,6 @@ env_mlflow
 mlruns
 MLflow_Course/apple_project/fake_data.csv
 MLflow_Course/Miniconda3-latest-Linux-x86_64.sh
+Spark/*.csv
+Spark/json_bracket.json
+Spark/shakespeare.txt
