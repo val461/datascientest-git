@@ -6,6 +6,8 @@ from datetime import timedelta
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
 from passlib.context import CryptContext
 
+api = Flask(__name__)
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 users_db = {
@@ -106,3 +108,6 @@ def get_resource():
     current_username = get_jwt_identity()
     return jsonify({"resource" : get_user(users_db, current_username)['resource'],
     "owner": current_username})
+
+if __name__ == "__main__":
+    api.run()
