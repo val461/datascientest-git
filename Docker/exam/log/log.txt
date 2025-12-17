@@ -1,135 +1,5 @@
 
         ============================
-            Authentication test
-        ============================
-
-        request done at "/v1/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'some sentence'}
-
-        Expected result = 200;
-        actual result = 200
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Authentication test
-        ============================
-
-        request done at "/v2/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'some sentence'}
-
-        Expected result = 200;
-        actual result = 200
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Authentication test
-        ============================
-
-        request done at "/v1/sentiment"
-        {'username': 'bob', 'password': 'builder', 'sentence': 'some sentence'}
-
-        Expected result = 200;
-        actual result = 200
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Authentication test
-        ============================
-
-        request done at "/v2/sentiment"
-        {'username': 'bob', 'password': 'builder', 'sentence': 'some sentence'}
-
-        Expected result = 403;
-        actual result = 403
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v1/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'life is beautiful'}
-
-        Expected result: positive;
-        actual result: 0.5994
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v2/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'life is beautiful'}
-
-        Expected result: positive;
-        actual result: 0.5994
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v1/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'that sucks'}
-
-        Expected result: negative;
-        actual result: -0.3612
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v2/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'that sucks'}
-
-        Expected result: negative;
-        actual result: -0.3612
-
-        ==>  SUCCESS
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v1/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'opposite of negative'}
-
-        Expected result: positive;
-        actual result: -0.5719
-
-        ==>  FAILURE
-
-        
-        ============================
-            Content test
-        ============================
-
-        request done at "/v2/sentiment"
-        {'username': 'alice', 'password': 'wonderland', 'sentence': 'opposite of negative'}
-
-        Expected result: positive;
-        actual result: -0.5719
-
-        ==>  FAILURE
-
-        
-        ============================
             Authorization test
         ============================
 
@@ -179,5 +49,122 @@
         actual result = 403
 
         ==>  SUCCESS
+
+        
+        ============================
+            Content test
+        ============================
+
+        request done at "/v1/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'life is beautiful'}
+
+        Expected result: positive;
+        actual result: 0.5994
+
+        ==>  SUCCESS
+
+        
+    ============================
+        Authentication test
+    ============================
+
+    request done at "/permissions"
+    {'username': 'alice', 'password': 'wonderland'}
+
+    Expected result = 200;
+    actual result = 200
+
+    ==>  SUCCESS
+
+    
+        ============================
+            Content test
+        ============================
+
+        request done at "/v2/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'life is beautiful'}
+
+        Expected result: positive;
+        actual result: 0.5994
+
+        ==>  SUCCESS
+
+        
+    ============================
+        Authentication test
+    ============================
+
+    request done at "/permissions"
+    {'username': 'bob', 'password': 'builder'}
+
+    Expected result = 200;
+    actual result = 200
+
+    ==>  SUCCESS
+
+    
+        ============================
+            Content test
+        ============================
+
+        request done at "/v1/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'that sucks'}
+
+        Expected result: negative;
+        actual result: -0.3612
+
+        ==>  SUCCESS
+
+        
+    ============================
+        Authentication test
+    ============================
+
+    request done at "/permissions"
+    {'username': 'clementine', 'password': 'mandarine'}
+
+    Expected result = 403;
+    actual result = 403
+
+    ==>  SUCCESS
+
+    
+        ============================
+            Content test
+        ============================
+
+        request done at "/v2/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'that sucks'}
+
+        Expected result: negative;
+        actual result: -0.3612
+
+        ==>  SUCCESS
+
+        
+        ============================
+            Content test
+        ============================
+
+        request done at "/v1/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'opposite of negative'}
+
+        Expected result: positive;
+        actual result: -0.5719
+
+        ==>  FAILURE
+
+        
+        ============================
+            Content test
+        ============================
+
+        request done at "/v2/sentiment"
+        {'username': 'alice', 'password': 'wonderland', 'sentence': 'opposite of negative'}
+
+        Expected result: positive;
+        actual result: -0.5719
+
+        ==>  FAILURE
 
         
