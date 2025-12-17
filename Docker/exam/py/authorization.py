@@ -1,7 +1,7 @@
 import os
 import requests
 
-api_address = '127.0.0.1'
+api_address = 'my_api_from_compose'
 api_port = 8000
 pages = ['v1/sentiment','v2/sentiment']
 tests = [('alice','wonderland',[200,200]),('bob','builder',[200,403])]
@@ -30,7 +30,7 @@ for user, password, expected_results in tests:
 
         output = f'''
         ============================
-            Authentication test
+            Authorization test
         ============================
 
         request done at "/{page}"
@@ -44,5 +44,5 @@ for user, password, expected_results in tests:
         '''
         print(output)
         if os.environ.get('LOG') == 1:
-            with open('api_test.log', 'a') as file:
+            with open('log/api_test.log', 'a') as file:
                 file.write(output)

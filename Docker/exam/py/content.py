@@ -2,7 +2,7 @@ import os
 import requests
 import json
 
-api_address = '127.0.0.1'
+api_address = 'my_api_from_compose'
 api_port = 8000
 pages = ['v1/sentiment','v2/sentiment']
 user, password = 'alice','wonderland'
@@ -31,7 +31,7 @@ for sentence, expected_result in tests:
         result_description = {1:'positive',-1:'negative'}
         output = f'''
         ============================
-            Authentication test
+            Content test
         ============================
 
         request done at "/{page}"
@@ -45,5 +45,5 @@ for sentence, expected_result in tests:
         '''
         print(output)
         if os.environ.get('LOG') == 1:
-            with open('api_test.log', 'a') as file:
+            with open('log/api_test.log', 'a') as file:
                 file.write(output)
