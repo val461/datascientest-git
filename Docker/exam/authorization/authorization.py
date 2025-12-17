@@ -11,7 +11,7 @@ for user, password, expected_results in tests:
         params={
             'username': user,
             'password': password,
-            'sentence': 'not a negative sentence'
+            'sentence': 'some sentence'
         }
         # requête
         r = requests.get(
@@ -43,6 +43,6 @@ for user, password, expected_results in tests:
 
         '''
         print(output)
-        if os.environ.get('LOG') == 1:
+        if os.environ.get('LOG') == '1':
             with open('log/api_test.log', 'a') as file:
                 file.write(output)

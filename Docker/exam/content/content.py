@@ -6,7 +6,7 @@ api_address = 'my_api_from_compose'
 api_port = 8000
 pages = ['v1/sentiment','v2/sentiment']
 user, password = 'alice','wonderland'
-tests = [("life is beautiful",1),("that sucks",-1)]
+tests = [("life is beautiful",1),("that sucks",-1),("opposite of negative",1)]
 
 for sentence, expected_result in tests:
     for k, page in enumerate(pages):
@@ -44,6 +44,6 @@ for sentence, expected_result in tests:
 
         '''
         print(output)
-        if os.environ.get('LOG') == 1:
+        if os.environ.get('LOG') == '1':
             with open('log/api_test.log', 'a') as file:
                 file.write(output)

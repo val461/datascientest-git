@@ -1,14 +1,13 @@
-version: "3.9"
 services:
-  jupyter:
-    image: jupyter/minimal-notebook:ubuntu-18.04
-    container_name: my_jupyter_from_compose
-    networks:
-      - my_network_from_compose
-    volumes:
-      - .:/home/jovyan/work
-    ports:
-      - "8888:8888"
+  # jupyter:
+  #   image: jupyter/minimal-notebook:ubuntu-18.04
+  #   container_name: my_jupyter_from_compose
+  #   networks:
+  #     - my_network_from_compose
+  #   volumes:
+  #     - .:/home/jovyan/work
+  #   ports:
+  #     - "8888:8888"
   api:
     image: datascientest/fastapi:1.0.0
     container_name: my_api_from_compose
@@ -20,6 +19,7 @@ services:
       test: ["CMD-SHELL", "python3 -c 'import requests; requests.get(\"http://localhost:8000/status\").raise_for_status()'"]
       interval: 2m30s
       timeout: 5s
+      start_period: 1s
       retries: 5
   authentication:
     image: authentication:latest
@@ -32,5 +32,33 @@ services:
     depends_on:
       api:
         condition: service_healthy
+    environment:
+      LOG: 1
+  authorization:
+    image: authorization:latest
+    container_name: my_authorization_from_compose
+    networks:
+      - my_network_from_compose
+    volumes:
+      - ./authorization:/my_server/code
+      - ./log:/my_server/log
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      LOG: 1
+  content:
+    image: content:latest
+    container_name: my_content_from_compose
+    networks:
+      - my_network_from_compose
+    volumes:
+      - ./content:/my_server/code
+      - ./log:/my_server/log
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      LOG: 1
 networks:
   my_network_from_compose:

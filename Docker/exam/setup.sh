@@ -1,7 +1,13 @@
-# ? mkdir some folders, e.g. log
+# remove log if exists
 
-# dans le dossier de l'image
+cd authentication
 docker image build . -t authentication:latest
 
-# dans le dossier avec docker-compose.yml
+cd ../authorization
+docker image build . -t authorization:latest
+
+cd ../content
+docker image build . -t content:latest
+
+cd ..
 docker compose up
