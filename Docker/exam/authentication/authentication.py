@@ -1,11 +1,13 @@
 import os
 import requests
 
-api_address = '127.0.0.1'
+# api_address = '127.0.0.1'
+api_address = 'api'
 api_port = 8000
 page = 'permissions'
 tests = [('alice','wonderland',200),('bob','builder',200), ('clementine','mandarine',403)]
 
+# user, password, expected_result = tests[0]
 for user, password, expected_result in tests:
     # requête
     r = requests.get(
