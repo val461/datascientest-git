@@ -15,6 +15,7 @@ def failed_task():
 def random_fail_task():
     random.seed()
     a = random.random()
+    print(a)
     if a < .9:
         raise Exception('This task randomly failed')
 
@@ -30,27 +31,30 @@ with DAG(
 ) as my_dag:
 
     task1 = PythonOperator(
-        task_id='task1',
-        python_callable=random_fail_task
+        task_id="my_failed_task",
+        python_callable=failed_task,
+        retries=5,
+        retry_delay=datetime.timedelta(seconds=30),
+        dag=my_dag,
+        email_on_retry=True,
+        email=['airflowtest@hotmail.com']
     )
 
     task2 = PythonOperator(
         task_id='task2',
-        python_callable=successful_task,
-        trigger_rule='all_failed'
+        python_callable=random_fail_task
     )
 
     task3 = PythonOperator(
         task_id='task3',
-        python_callable=successful_task,
-        trigger_rule='all_success'
+        python_callable=random_fail_task
     )
 
     task4 = PythonOperator(
         task_id='task4',
-        python_callable=successful_task,
-        trigger_rule='all_done'
+        python_callable=successful_task
     )
 
-    task1 >> [task2, task3]
-    [task2, task3] >> task4
+    task1.as_setup() >> [task2, task3]
+    [task2, task3] >> task4.as_teardown()
+    task1 >> task4
